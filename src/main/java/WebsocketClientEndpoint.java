@@ -20,7 +20,7 @@ import javax.websocket.WebSocketContainer;
  * @author Jiji_Sasidharan
  */
 
-@ClientEndpoint(configurator = MyClientConfigurator.class, encoders = MessageEncoder.class, decoders = MessageDecoder.class)
+@ClientEndpoint(configurator = MyClientConfigurator.class)
 public class WebsocketClientEndpoint {
 
     Session userSession = null;
@@ -65,7 +65,7 @@ public class WebsocketClientEndpoint {
      * @param message The text message
      */
     @OnMessage
-    public void onMessage(Message message) {
+    public void onMessage(String message) {
         if (this.messageHandler != null) {
             this.messageHandler.handleMessage(message);
         }
@@ -85,8 +85,8 @@ public class WebsocketClientEndpoint {
      *
      * @param message
      */
-    public void sendMessage(Message message) throws IOException, EncodeException {
-        this.userSession.getBasicRemote().sendObject(message);
+    public void sendMessage(String message) throws IOException, EncodeException {
+        this.userSession.getAsyncRemote().sendText(message);
     }
 
     /**
@@ -96,6 +96,6 @@ public class WebsocketClientEndpoint {
      */
     public static interface MessageHandler {
 
-        public void handleMessage(Message message);
+        public void handleMessage(String message);
     }
 }

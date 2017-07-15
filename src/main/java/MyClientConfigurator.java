@@ -14,7 +14,5 @@ public class MyClientConfigurator extends ClientEndpointConfig.Configurator {
     public void beforeRequest(Map<String, List<String>> headers) {
         called = true;
         headers.put("origin", Arrays.asList("null"));
-        headers.put("type", Arrays.asList("register"));
-        headers.put("id", Arrays.asList("register_0"));
     }
 }

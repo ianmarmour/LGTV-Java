@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="LGTV-MAVEN:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LGTV_MAVEN_jar</output-path>
+    <root id="archive" name="LGTV-MAVEN.jar">
+      <element id="module-output" name="LGTV-MAVEN" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/glassfish/tyrus/bundles/tyrus-standalone-client/1.13.1/tyrus-standalone-client-1.13.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.4/commons-cli-1.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

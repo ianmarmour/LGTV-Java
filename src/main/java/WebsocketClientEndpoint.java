@@ -13,6 +13,8 @@ import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.WebSocketContainer;
+import javax.websocket.CloseReason;
+
 
 /**
  * ChatServer Client
